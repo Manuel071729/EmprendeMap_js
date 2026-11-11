@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="EmprendeMap conecta emprendedores con locales comerciales en El Salvador.">
+  <title>EmprendeMap</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div id="app"><div class="loading">Cargando EmprendeMap…</div></div>
+  <noscript><p style="padding:24px;font-family:sans-serif">Activa JavaScript en tu navegador para usar EmprendeMap.</p></noscript>
+  <script src="app.js" onerror="window.__emprendeFalla=true"></script>
+  <script>
+    // Si app.js no se carga, mostramos instrucciones en vez de quedarnos en "Cargando…"
+    setTimeout(function () {
+      if (window.__emprendeLoaded) return;
+      var app = document.getElementById("app");
+      if (!app) return;
+      app.innerHTML =
+        '<div style="max-width:560px;margin:60px auto;padding:24px;font-family:sans-serif;border:1px solid #ddd;border-radius:12px">' +
+        '<h1 style="margin-top:0">No se pudo cargar EmprendeMap</h1>' +
+        '<p>El archivo <b>app.js</b> no se pudo leer. Casi siempre pasa por una de estas causas:</p>' +
+        '<ol><li>Abriste <b>index.html</b> dentro del ZIP sin extraerlo. Haz clic derecho en el ZIP → <b>Extraer todo</b>.</li>' +
+        '<li><b>index.html</b> fue movido fuera de su carpeta. Debe estar junto a <b>app.js</b> y <b>app.css</b>.</li>' +
+        '<li>Lo abriste desde un visor o vista previa (WhatsApp, correo, Drive). Ábrelo con Chrome o Edge.</li></ol>' +
+        '<button onclick="location.reload()">Volver a intentar</button></div>';
+    }, 2500);
+  </script>
+</body>
+</html>

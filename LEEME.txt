@@ -1,0 +1,17 @@
+EMPRENDEMAP - VERSIÓN HTML, CSS Y JAVASCRIPT
+
+CÓMO ABRIR
+1. Extrae la carpeta del ZIP.
+2. Abre la carpeta emprende_db.
+3. Haz doble clic en index.html. Se abrirá en tu navegador.
+No necesitas XAMPP, Apache, PHP ni MySQL.
+
+FUNCIONES
+- Registro e inicio de sesión local para emprendedores y propietarios.
+- Publicación, búsqueda, edición y eliminación de locales.
+- Perfil básico y recomendaciones.
+- Datos guardados en localStorage del navegador.
+
+IMPORTANTE
+Esta versión es una demostración local. Los datos se guardan únicamente en el navegador y dispositivo donde se utiliza el sitio. No hay sincronización entre diferentes personas/dispositivos ni seguridad de producción. Las contraseñas se almacenan localmente como demostración; no uses contraseñas reales. Para un sitio público multiusuario se necesitaría un backend o servicio de base de datos en la nube.
+Las imágenes originales se conservan. Si agregas imágenes propias, colócalas dentro de la carpeta del proyecto y escribe su ruta relativa en el formulario.

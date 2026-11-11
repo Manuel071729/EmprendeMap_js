@@ -1,0 +1,218 @@
+body {
+  background-color: white;
+  color: #260808;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ 
+/* Navbar */
+.navbar {
+  background-color: white;
+}
+.navbar-brand, .nav-link {
+  color: #260808 !important;
+  font-weight: 600;
+}
+.btn-primary {
+  background-color: #f0c14b;
+  border-color: #f0c14b;
+  color: #260808;
+  font-weight: 600;
+}
+.btn-primary:hover {
+  background-color: #d4a930;
+  border-color: #d4a930;
+  color: #260808;
+}
+    
+
+/* Header con imagen en HTML */
+header {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.header-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  border-radius: 8px;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+  max-width: 90%;
+}
+
+/* Tarjetas de beneficios */
+.card {
+  border: 2px solid #f0c14b;
+  border-radius: 12px;
+  background-color: #fff8e1;
+  color: #4D2311;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 4px 12px rgba(240, 193, 75, 0.5);
+}
+.icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #f0c14b;
+}
+h3 {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #4D2311;
+}
+h4 {
+  font-weight: 700;
+  color: #4D2311;
+  margin-bottom: 0.5rem;
+}
+p {
+  font-size: 0.9rem;
+  color: #4D2311;
+}
+.container {
+  max-width: 900px;
+}
+
+/* ===========================
+   Media Queries Generales
+   =========================== */
+
+/* Pantallas grandes (escritorio ancho) */
+@media (min-width: 1200px) {
+    .container {
+        width: 80%;
+        max-width: 1200px;
+    }
+}
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+    }
+    .local-card {
+        flex-direction: column;
+        align-items: center;
+    }
+    .local-card img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Celulares grandes */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .btn {
+        display: inline-block;
+        margin-top: 5px;
+    }
+}
+
+/* Celulares pequeños */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    .local-card img {
+        height: 200px;
+    }
+    .formulario-editar {
+        padding: 15px;
+    }
+    .formulario-editar input,
+    .formulario-editar textarea {
+        font-size: 14px;
+    }
+}
+
+
+/* ===== EmprendeMap: acabado visual y adaptación responsive ===== */
+:root {
+  --em-gold: #f2c543;
+  --em-gold-dark: #d8a91f;
+  --em-ink: #2b1b13;
+  --em-muted: #75685f;
+  --em-cream: #fffaf0;
+  --em-line: rgba(43, 27, 19, .10);
+}
+html { scroll-behavior: smooth; }
+body {
+  color: var(--em-ink);
+  background: linear-gradient(135deg, #fffdf8 0%, #fff8e7 100%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+a { transition: color .2s ease, background .2s ease, transform .2s ease; }
+.navbar {
+  background: rgba(255,255,255,.94) !important;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 5px 22px rgba(43,27,19,.06);
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  z-index: 20;
+}
+.navbar-brand { font-weight: 800 !important; letter-spacing: -.4px; }
+.nav-link { font-weight: 600; }
+.nav-link:hover { color: #b78300 !important; }
+.btn, button, .btn-primary, .btn-ver-mas, .boton-etiqueta {
+  border-radius: 12px;
+  font-weight: 700;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.btn:hover, button:hover, .btn-primary:hover, .btn-ver-mas:hover, .boton-etiqueta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(190,145,24,.2);
+}
+.btn-primary, .btn-ver-mas, .boton-etiqueta {
+  background: var(--em-gold) !important;
+  border-color: var(--em-gold) !important;
+  color: var(--em-ink) !important;
+}
+h1, h2, h3, h4 { color: var(--em-ink); letter-spacing: -.45px; }
+.card, .card-custom, .tarjeta, .local-card, .form-box, .formulario-editar,
+.IngresoDeLocal form, .container > form {
+  box-shadow: 0 12px 32px rgba(43,27,19,.08);
+}
+.card, .card-custom, .tarjeta {
+  border-radius: 20px;
+  overflow: hidden;
+}
+input, textarea, select, .form-control {
+  border: 1px solid rgba(43,27,19,.16) !important;
+  border-radius: 11px !important;
+  padding: .75rem .9rem !important;
+}
+input:focus, textarea:focus, select:focus, .form-control:focus {
+  border-color: var(--em-gold) !important;
+  box-shadow: 0 0 0 .22rem rgba(242,197,67,.2) !important;
+}
+img { max-width: 100%; }
+@media (max-width: 768px) {
+  .navbar .container { padding-left: 18px; padding-right: 18px; }
+  .header-text { font-size: clamp(1.45rem, 5vw, 2.2rem) !important; }
+  .container { max-width: 100%; }
+  .card-custom, .tarjeta { min-height: auto; }
+}

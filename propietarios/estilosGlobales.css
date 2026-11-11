@@ -1,0 +1,4 @@
+
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#fffdf8,#fff6df);color:#2b1b13;font-family:Segoe UI,Tahoma,sans-serif}
+.navbar{background:#fff!important;box-shadow:0 5px 22px #2b1b1310}.navbar-brand,.nav-link{color:#2b1b13!important;font-weight:700}
+.btn-primary{background:#f2c543!important;border-color:#f2c543!important;color:#2b1b13!important;border-radius:12px;font-weight:700}

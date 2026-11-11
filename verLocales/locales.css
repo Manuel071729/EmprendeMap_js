@@ -1,0 +1,257 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.navbar {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 1rem 2rem;
+}
+
+.navbar .nav-link {
+  margin-right: 1rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.navbar .btn-login {
+  background-color: #f4b400;
+  color: white;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.input-group button {
+  background-color: #f4b400;
+  color: white;
+  border: none;
+}
+
+.card {
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border: none;
+  /* Importante para que las tarjetas llenen la altura de la columna */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-img-top {
+  height: 200px; /* altura fija para todas las imágenes */
+  object-fit: cover; /* recorta sin deformar la imagen */
+}
+
+.card-body {
+  flex: 1; /* que el cuerpo de la tarjeta tome todo el espacio posible */
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-ver-mas {
+  background-color: #f4b400;
+  color: white;
+  border: none;
+  margin-top: auto; /* para que el botón se alinee abajo */
+}
+
+/* Asegurar que las columnas tengan altura igual para que las tarjetas se estiren */
+.row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+    padding-left: 0;
+  }
+
+  .contact-button {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    height: 40px;
+  }
+
+  .contact-button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .label {
+    font-size: 11px;
+  }
+}   
+.background-deco {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml;utf8,\
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'>\
+    <defs>\
+      <linearGradient id='grad' x1='0%' y1='0%' x2='100%' y2='100%'>\
+        <stop offset='0%' stop-color='%23F2C543'/>\
+        <stop offset='50%' stop-color='%23d96404'/>\
+        <stop offset='100%' stop-color='%23d98e04'/>\
+      </linearGradient>\
+    </defs>\
+    <circle cx='150' cy='350' r='200' stroke='url(%23grad)' stroke-width='80' fill='none' opacity='0.3'/>\
+    <circle cx='100' cy='100' r='80' fill='url(%23grad)' opacity='0.4'/>\
+    <circle cx='700' cy='500' r='100' fill='url(%23grad)' opacity='0.2'/>\
+    <rect x='550' y='100' width='200' height='200' rx='100' fill='url(%23grad)' opacity='0.2'/>\
+  </svg>\
+  ") no-repeat center;
+  background-size: cover;
+  z-index: -1;
+}
+
+/* ===========================
+   Media Queries Generales
+   =========================== */
+
+/* Pantallas grandes (escritorio ancho) */
+@media (min-width: 1200px) {
+    .container {
+        width: 80%;
+        max-width: 1200px;
+    }
+}
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+    }
+    .local-card {
+        flex-direction: column;
+        align-items: center;
+    }
+    .local-card img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Celulares grandes */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .btn {
+        display: inline-block;
+        margin-top: 5px;
+    }
+}
+
+/* Celulares pequeños */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    .local-card img {
+        height: 200px;
+    }
+    .formulario-editar {
+        padding: 15px;
+    }
+    .formulario-editar input,
+    .formulario-editar textarea {
+        font-size: 14px;
+    }
+}
+
+
+/* ===== EmprendeMap: acabado visual y adaptación responsive ===== */
+:root {
+  --em-gold: #f2c543;
+  --em-gold-dark: #d8a91f;
+  --em-ink: #2b1b13;
+  --em-muted: #75685f;
+  --em-cream: #fffaf0;
+  --em-line: rgba(43, 27, 19, .10);
+}
+html { scroll-behavior: smooth; }
+body {
+  color: var(--em-ink);
+  background: linear-gradient(135deg, #fffdf8 0%, #fff8e7 100%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+a { transition: color .2s ease, background .2s ease, transform .2s ease; }
+.navbar {
+  background: rgba(255,255,255,.94) !important;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 5px 22px rgba(43,27,19,.06);
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  z-index: 20;
+}
+.navbar-brand { font-weight: 800 !important; letter-spacing: -.4px; }
+.nav-link { font-weight: 600; }
+.nav-link:hover { color: #b78300 !important; }
+.btn, button, .btn-primary, .btn-ver-mas, .boton-etiqueta {
+  border-radius: 12px;
+  font-weight: 700;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.btn:hover, button:hover, .btn-primary:hover, .btn-ver-mas:hover, .boton-etiqueta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(190,145,24,.2);
+}
+.btn-primary, .btn-ver-mas, .boton-etiqueta {
+  background: var(--em-gold) !important;
+  border-color: var(--em-gold) !important;
+  color: var(--em-ink) !important;
+}
+h1, h2, h3, h4 { color: var(--em-ink); letter-spacing: -.45px; }
+.card, .card-custom, .tarjeta, .local-card, .form-box, .formulario-editar,
+.IngresoDeLocal form, .container > form {
+  box-shadow: 0 12px 32px rgba(43,27,19,.08);
+}
+.card, .card-custom, .tarjeta {
+  border-radius: 20px;
+  overflow: hidden;
+}
+input, textarea, select, .form-control {
+  border: 1px solid rgba(43,27,19,.16) !important;
+  border-radius: 11px !important;
+  padding: .75rem .9rem !important;
+}
+input:focus, textarea:focus, select:focus, .form-control:focus {
+  border-color: var(--em-gold) !important;
+  box-shadow: 0 0 0 .22rem rgba(242,197,67,.2) !important;
+}
+img { max-width: 100%; }
+@media (max-width: 768px) {
+  .navbar .container { padding-left: 18px; padding-right: 18px; }
+  .header-text { font-size: clamp(1.45rem, 5vw, 2.2rem) !important; }
+  .container { max-width: 100%; }
+  .card-custom, .tarjeta { min-height: auto; }
+}
